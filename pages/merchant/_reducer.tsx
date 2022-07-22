@@ -33,6 +33,7 @@ function reducer(state: React.ComponentState, { type, payload }: ACTIONTYPE) {
 
     case ACTIONS.CLEAR_INPUT:
       if (state.currentAmount == null) return
+      if (state.username == null) return
       router.push(
         {
           pathname: `/merchant/${state.username}`,
